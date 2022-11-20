@@ -87,8 +87,30 @@ cp .env.example .env # web
 
 _**OBS:** Não esqueça de preencher as variáveis com seus dados_
 
-5. Instale as dependências em cada projeto com npm (`npm install`).
+5. Instale as dependências em cada projeto com npm (`npm install`)
 
-6. Rode os dois projetos ao mesmo tempo com npm (`npm run start:dev`)
+```bash
+npm install # server
+```
+
+```bash
+npm install # web
+```
+
+6. Rode as migrations no banco de dados com prisma.
+
+```bash
+npm run prisma:deploy # server
+```
+
+7. Rode os dois projetos ao mesmo tempo com npm
+
+```bash
+npm run start:dev # server
+```
+
+```bash
+npm run start:dev # web
+```
 
 </details>
