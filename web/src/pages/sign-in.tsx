@@ -6,7 +6,6 @@ import { FiLoader, FiLock, FiUser } from 'react-icons/fi';
 
 import { Button } from '../components/button';
 import { useAccount } from '../hooks/use-account';
-import { api } from '../libs/api';
 import { notify } from '../libs/notify';
 
 const SignIn: React.FC = () => {
