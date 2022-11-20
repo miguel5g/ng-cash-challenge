@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  database:
+    image: postgres
+    container_name: ng-database
+    networks:
+      - private
+    environment:
+      - POSTGRES_PASSWORD=example
+      - POSTGRES_USER=example
+      - POSTGRES_DB=ng-challenge
+
+  server:
+    build: ./server
+    container_name: ng-server
+    networks:
+      - private
+      - public
+    environment:
+      - DATABASE_URL=postgresql://example:example@database:5432/ng-challenge?schema=public
+      - PORT=1234
+      - SECRET=example
+      - SALT_ROUNDS=10
+      - ORIGIN=http://localhost:80
+    ports:
+      - '1234:1234'
+    depends_on:
+      - database
+
+  web:
+    build: ./web
+    container_name: ng-web
+    networks:
+      - public
+    environment:
+      - NEXT_PUBLIC_BASE_API_URL=http://localhost:1234
+    ports:
+      - 80:3000
+    depends_on:
+      - server
+
+networks:
+  private:
+  public:
