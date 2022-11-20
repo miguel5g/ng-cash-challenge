@@ -18,7 +18,7 @@ const AccountDetails: React.FC<AccountDetailsProps> = ({ balance, totalTransacti
         <p className="font-light">Saldo atual</p>
       </div>
       <div className="flex-1 p-8 mr-2 bg-white border border-black shadow-solid-md">
-        {totalTransactions ? (
+        {typeof totalTransactions === 'number' ? (
           <span className="text-2xl font-semibold">{totalTransactions}</span>
         ) : (
           <div className="h-8 bg-gray-300 rounded w-28 animate-pulse" />
