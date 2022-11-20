@@ -93,11 +93,11 @@ const AccountProvider: React.FC<{ children: React.ReactNode }> = ({ children }) 
       .filter((transaction) => {
         if (!filters.createdAt) return true;
 
-        const timeZoneOffset = new Date().getTimezoneOffset() * 60 * 1000;
-        const transactionDate = new Date(transaction.createdAt).getTime() + timeZoneOffset;
-        const filterDateStart = new Date(filters.createdAt).getTime() + timeZoneOffset;
-        const filterDateEnd =
-          new Date(filterDateStart + 1000 * 60 * 60 * 24).getTime() + timeZoneOffset;
+        const ONE_DAY_IN_MS = 1000 * 60 * 60 * 24;
+        const TIMEZONE_OFFSET_IN_MS = new Date().getTimezoneOffset() * 60 * 1000;
+        const transactionDate = new Date(transaction.createdAt).getTime() - TIMEZONE_OFFSET_IN_MS;
+        const filterDateStart = new Date(filters.createdAt).getTime();
+        const filterDateEnd = new Date(filterDateStart + ONE_DAY_IN_MS).getTime();
 
         if (transactionDate >= filterDateStart && transactionDate < filterDateEnd) {
           return true;
