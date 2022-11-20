@@ -24,7 +24,7 @@ const Home: React.FC = () => {
 
       <AccountDetails balance={account?.balance} totalTransactions={account?.transactions?.length} />
 
-      <section className="flex w-full max-w-3xl gap-8 mx-auto mt-12 mb-16">
+      <section className="flex flex-col-reverse w-full max-w-3xl gap-8 px-6 mx-auto mt-12 mb-16 md:flex-row">
         <div className="flex flex-col flex-1">
           <div className="flex items-center justify-between">
             <h2 className="text-lg font-semibold">Histórico de transferências</h2>

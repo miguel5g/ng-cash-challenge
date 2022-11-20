@@ -57,8 +57,8 @@ const SignUp: React.FC = () => {
         <title>Criar conta | NG Cash</title>
       </Head>
 
-      <section className="flex flex-col w-full max-w-xl p-12 bg-white border border-black shadow-solid-lg">
-        <h1 className="text-3xl font-bold uppercase text-slate-900">Faça parte da nova geração.</h1>
+      <section className="flex flex-col w-full max-w-xl p-6 bg-white border border-black md:p-8 lg:p-12 shadow-solid-lg">
+        <h1 className="text-2xl font-bold uppercase md:text-3xl text-slate-900">Faça parte da nova geração.</h1>
         <p className="font-light text-slate-600">
           Crie sua conta e junte-se a milhares de outras pessoas na construção do futuro!
         </p>
@@ -78,12 +78,12 @@ const SignUp: React.FC = () => {
             />
           </div>
           <div className="flex flex-col">
-            <label htmlFor="username" className="flex items-center gap-2 font-light text-slate-900">
+            <label htmlFor="password" className="flex items-center gap-2 font-light text-slate-900">
               <FiLock />
               <span>Senha</span>
             </label>
             <input
-              id="username"
+              id="password"
               className="px-3 border border-black py-1.5 mt-1 shadow-solid-sm"
               type="password"
               value={password}

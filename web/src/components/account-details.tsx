@@ -7,7 +7,7 @@ interface AccountDetailsProps {
 
 const AccountDetails: React.FC<AccountDetailsProps> = ({ balance, totalTransactions }) => {
   return (
-    <main className="flex w-full max-w-3xl gap-8 mx-auto mt-16">
+    <main className="flex flex-col w-full max-w-3xl gap-8 px-6 mx-auto mt-16 md:flex-row">
       <div className="p-8 border border-black shadow-solid-md flex-[2] bg-white">
         {balance ? (
           <span className="text-2xl font-semibold">{currencyParser(balance)}</span>
