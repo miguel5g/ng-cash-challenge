@@ -55,12 +55,12 @@ const NewTransactionBox: React.FC = () => {
         </div>
 
         <div className="flex flex-col mt-4">
-          <label htmlFor="username" className="flex items-center gap-2 font-light text-slate-900">
+          <label htmlFor="amount" className="flex items-center gap-2 font-light text-slate-900">
             <FiDollarSign />
             <span>Valor da transferência</span>
           </label>
           <input
-            id="username"
+            id="amount"
             className="px-3 border border-black py-1.5 mt-1 shadow-solid-sm"
             type="number"
             value={amount}
