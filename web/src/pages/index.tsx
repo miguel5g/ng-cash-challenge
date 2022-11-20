@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { useState } from 'react';
 import { FiFilter } from 'react-icons/fi';
 
@@ -15,6 +16,10 @@ const Home: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <Head>
+        <title>Dashboard | NG Cash</title>
+      </Head>
+
       <Header username={account?.username} />
 
       <AccountDetails balance={account?.balance} totalTransactions={account?.transactions?.length} />
