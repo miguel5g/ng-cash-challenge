@@ -1,6 +1,6 @@
 # NG.CASH Challenge
 
-Projeto desenvolvido para teste técnico na NG Cash
+Projeto fullstack desenvolvido para teste técnico da NG.Cash
 
 ![Home Page](/.github/assets/dashboard.png)
 
@@ -24,10 +24,11 @@ Tecnologias e ferramentas que foram utilizadas para desenvolver este projeto:
 - [React](http://reactjs.org/)
 - [NextJs](https://nextjs.org/)
 - [TailwindCSS](https://tailwindcss.com/)
+- E mais algumas outras como cors, cookie parser, json web token, bcrypt, zod, react icons e react hot toast.
 
 ## :rocket: Como executar
 
-1. Clone o repositório para sua maquina (`git clone https://github.com/miguel5g/ng-challenge.git`) ou baixe o zip do código fonte ([baixar](https://github.com/miguel5g/ng-cash-challenge/archive/refs/heads/main.zip)).
+1. Clone o repositório para sua maquina (`git clone https://github.com/miguel5g/ng-cash-challenge.git`) ou baixe o zip do código fonte ([baixar](https://github.com/miguel5g/ng-cash-challenge/archive/refs/heads/main.zip)).
 
 2. Acesse a pasta do projeto _(após descompactar ou clonar)_
 
@@ -78,11 +79,11 @@ _**OBS:** Preencha com seus dados trocando os campos com <>_
 4. Criar variáveis de ambiente
 
 ```bash
-cp .env.example .env # server
+cp .env.example .env # Pasta /server
 ```
 
 ```bash
-cp .env.example .env # web
+cp .env.example .env # Pasta /web
 ```
 
 _**OBS:** Não esqueça de preencher as variáveis com seus dados_
@@ -90,27 +91,27 @@ _**OBS:** Não esqueça de preencher as variáveis com seus dados_
 5. Instale as dependências em cada projeto com npm (`npm install`)
 
 ```bash
-npm install # server
+npm install # Pasta /server
 ```
 
 ```bash
-npm install # web
+npm install # Pasta /web
 ```
 
 6. Rode as migrations no banco de dados com prisma.
 
 ```bash
-npm run prisma:deploy # server
+npm run prisma:deploy # Pasta /server
 ```
 
 7. Rode os dois projetos ao mesmo tempo com npm
 
 ```bash
-npm run start:dev # server
+npm run start:dev # Pasta /server
 ```
 
 ```bash
-npm run start:dev # web
+npm run start:dev # Pasta /web
 ```
 
 </details>
